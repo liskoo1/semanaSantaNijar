@@ -1,0 +1,201 @@
+@font-face {
+  font-family: 'Metrophobic';
+  src: url('./fonts/Metrophobic-Regular.eot');
+  src: url('./fonts/Metrophobic-Regular.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/Metrophobic-Regular.woff2') format('woff2'),
+      url('./fonts/Metrophobic-Regular.woff') format('woff'),
+      url('./fonts/Metrophobic-Regular.ttf') format('truetype'),
+      url('./fonts/Metrophobic-Regular.svg#Metrophobic-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins-Medium.eot");
+  src: url("./fonts/Poppins-Medium.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/Poppins-Medium.woff2") format("woff2"),
+        url("../fonts/Poppins-Medium.woff") format("woff"),
+        url("../fonts/Poppins-Medium.ttf") format("truetype"),
+        url("../fonts/Poppins-Medium.svg#Poppins-Medium") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Parisienne';
+  src: url('./fonts/Parisienne-Regular.eot');
+  src: url('./fonts/Parisienne-Regular.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/Parisienne-Regular.woff2') format('woff2'),
+      url('./fonts/Parisienne-Regular.woff') format('woff'),
+      url('./fonts/Parisienne-Regular.ttf') format('truetype'),
+      url('./fonts/Parisienne-Regular.svg#Parisienne-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+:root{
+  --amarillo: #E5CFA6;
+  --morado:#44125A;
+  --font_fecha:"Metrophobic";
+  --font_popin: "Poppins";
+  --font_h2:"Parisienne";
+  --size_text_normal: 15px;
+
+}
+
+  body{
+    background-image: url("/public/back.webp");
+    background-repeat: repeat;
+    background-size:auto;
+  }
+  .container{
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    max-width: 1024px;
+  }
+  header{
+    position: fixed;
+    width: 95%;
+  }
+  header img{
+    padding-top: 15px;
+    width: 100%;
+  }
+  .pregon{
+    display: flex;
+  }
+  .alcalde{
+    width: 8rem;
+    height: 8rem;
+    margin-top: 20px;
+    border-radius: 50%;
+  }
+  .pregon div p{
+    padding-left: 10px;
+    font-family: var(--font_popin);
+    font-weight: 100;
+  }
+  .fecha{
+    padding-left: 10px;
+  }
+  section img{
+    width: 99%;
+    border: 2px solid white;
+  }
+  .fecha{
+    color: var(--amarillo);
+    display: flex;
+  }
+  .fecha .dia{
+    font-size: 50px;
+    margin: 0;
+    font-family: var(--font_fecha);
+  }
+  .fecha .mes{
+    margin: 0;
+  }
+  .fecha .diasemana{
+    
+    display: flex;
+    align-items: center;
+    margin-left: 25px ;
+    width: 100%;
+    font-size: 2rem;
+    color: white;
+    font-family: var(--font_h2);
+    letter-spacing: 3px;
+    font-style: italic;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  h2{
+    color: var(--amarillo) ;
+    font-family: var(--font_fecha);
+    margin-bottom: 0;
+  }
+  .actosdia{
+    margin-left: 20%;
+  }
+  div.actos{
+    display: flex;
+    
+  }
+  div.actos p{
+    min-width: 65px;
+    font-family: var(--font_popin);
+    font-size: var(--size_text_normal);
+    margin-bottom: 0;
+  }
+  div.actos p.hora{
+    font-weight: 900;
+  }
+  .calendarionav{
+    list-style: none;
+    font-family: var(--font_popin);
+    display: flex;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    padding-left: 8px;
+  }
+  .calendarionav a{
+    display: inline-block;
+    color: var(--morado);
+    text-decoration: none;
+    background-color: var(--amarillo);
+    width: 75%;
+    text-align: center;
+    border-radius: 5px;
+  }
+  .calendarionav li{
+    width: 2rem;
+  }
+  .hueco{
+    height: 10rem;
+    width: 1rem;
+  }
+  .cantico{
+    color: var(--amarillo);
+    text-align: center;
+    font-family: var(--font_popin);
+  }
+  
+
+  @media (min-width :378px) {
+    .hueco{
+      height: 13rem;
+    }
+    header{
+      width: 378px;
+    }
+  }
+  @media (min-width :667px) {
+    .hueco{
+      height: 16rem;
+    }
+    header{
+      width: 667px;
+    }
+  }
+  @media (min-width :1024px) {
+    .hueco{
+      height: 20rem;
+    }
+    header{
+      width: 1024px;
+    }
+    section{
+      display: flex;
+    }
+    section img{
+      max-width: 30rem;
+      max-height: 30rem;
+    }
+    .cantico{
+      padding-left: 15px;
+    }
+  }

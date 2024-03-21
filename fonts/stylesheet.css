@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Parisienne';
+    src: url('Parisienne-Regular.eot');
+    src: url('Parisienne-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Parisienne-Regular.woff2') format('woff2'),
+        url('Parisienne-Regular.woff') format('woff'),
+        url('Parisienne-Regular.ttf') format('truetype'),
+        url('Parisienne-Regular.svg#Parisienne-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
