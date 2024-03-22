@@ -35,7 +35,9 @@
   font-display: swap;
 }
 
-
+html{
+  scroll-behavior: smooth;
+}
 :root{
   --amarillo: #E5CFA6;
   --morado:#44125A;
@@ -89,11 +91,23 @@
   .fecha{
     color: var(--amarillo);
     display: flex;
+    position: relative;
   }
+  .dia::after{
+    content: "";
+    width: 1px;
+    height: 5rem;
+    background-color: var(--amarillo);
+    position: absolute;
+    left: 112%;
+    margin-top: 3px;
+  }
+
   .fecha .dia{
     font-size: 50px;
     margin: 0;
     font-family: var(--font_fecha);
+    position: relative;
   }
   .fecha .mes{
     margin: 0;
@@ -111,6 +125,7 @@
     font-style: italic;
     margin-bottom: 0;
     margin-top: 0;
+    padding-left: 15px;
   }
   h2{
     color: var(--amarillo) ;
@@ -146,13 +161,25 @@
     display: inline-block;
     color: var(--morado);
     text-decoration: none;
-    background-color: var(--amarillo);
-    width: 75%;
     text-align: center;
-    border-radius: 5px;
+    z-index: 2;
+    background-color: var(--amarillo);
+    width: 100%;
+    border-radius: 1rem;
   }
+  .calendarionav a:hover{
+    background-color: #85765a;
+  }
+
   .calendarionav li{
     width: 2rem;
+    text-align: center;
+    border-radius: 15%;
+  }
+  .calendarionav .activo{
+    transition: transform 0.5s ease;
+    position: relative;
+    top: -25px;
   }
   .hueco{
     height: 10rem;
@@ -163,8 +190,9 @@
     text-align: center;
     font-family: var(--font_popin);
   }
-  
-
+  section.diez{
+    margin-bottom: 100px;
+  }
   @media (min-width :378px) {
     .hueco{
       height: 13rem;
@@ -180,6 +208,13 @@
     header{
       width: 667px;
     }
+    .calendarionav li {
+      margin-left: 15px;
+    }
+    .calendarionav li:first-child {
+      margin-left: 0;
+    }
+
   }
   @media (min-width :1024px) {
     .hueco{
@@ -198,4 +233,9 @@
     .cantico{
       padding-left: 15px;
     }
+    .calendarionav .activo{
+      transform: scale(2);
+      top: -3rem
+    }
+
   }
